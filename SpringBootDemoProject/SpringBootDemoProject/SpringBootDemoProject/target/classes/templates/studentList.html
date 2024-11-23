@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student List</title>
+</head>
+<body>
+<h1>Student List</h1>
+<table border="1">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Branch</th>
+    </tr>
+    <!-- Iterate over each student in the `students` list -->
+    <tr th:each="student : ${students}">
+        <td th:text="${student.rno}">Roll No</td>
+        <td th:text="${student.name}">Name</td>
+        <td th:text="${student.brn}">Branch</td>
+    </tr>
+</table>
+<a href="/addStudent">Add New Student</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Student</title>
+</head>
+<body>
+<h1>Add New Student</h1>
+<form th:action="@{/saveStudent}" th:object="${student}" method="post">
+  <label>Roll No:</label>
+  <input type="number" th:field="*{rno}" /><br>
+  <label>Name:</label>
+  <input type="text" th:field="*{name}" /><br>
+  <label>Branch:</label>
+  <input type="text" th:field="*{brn}" /><br>
+  <button type="submit">Save</button>
+</form>
+<a href="/students">Back to Student List</a>
+</body>
+</html>
